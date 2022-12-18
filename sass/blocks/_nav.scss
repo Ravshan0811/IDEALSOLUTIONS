@@ -1,0 +1,44 @@
+.header{
+  &--container {
+    @include display(center,space-between);
+  }
+  &__img {
+    display: block;
+  }
+  &__wrap{
+    @include display(center,center);
+    gap: 40px;
+  }
+  &__wrap_text{
+    text-align: right;
+  }
+  &__description{
+    font-family: 'Code Next';
+    font-weight: 300;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+  }
+  &__wrap_text a{
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .header{
+    &__wrap{
+      gap: 20px;
+    }
+    &__img {
+      width: 100px;
+    }
+    &__wrap_text a{
+      font-size: 16px;
+    }
+    &__telegram_img {
+      width: 40px;
+    }
+  }
+}

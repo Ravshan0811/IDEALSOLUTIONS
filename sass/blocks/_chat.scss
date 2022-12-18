@@ -1,0 +1,40 @@
+.chat{
+  background: #293BDC;
+  &--container{
+    @include display(center,space-between);
+  }
+  &__wrap{
+    margin-right: 50px;
+  }
+  &__caption{
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+  }
+  &__description{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+    max-width: 443px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+  &__btn{
+    @include btn();
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #293BDC;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px 40px;
+  }
+  &__img{
+    max-width: 700px;
+  }
+  &__wrapper{
+    background: #000000;
+    padding: 237px 22px;
+  }
+}

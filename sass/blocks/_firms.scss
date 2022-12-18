@@ -1,0 +1,8 @@
+.firms{
+  padding: 150px 0;
+  &__wrapper{
+    @include display (flex-end,space-between);
+    gap: 50px;
+    margin-top: 80px;
+  }
+}

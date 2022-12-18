@@ -1,0 +1,26 @@
+.company {
+  padding: 150px 0;
+  background: #000000;
+  &__caption {
+    font-weight: 700;
+    font-size: 48px;
+    color: #ffffff;
+  }
+  &__description {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    color: #ffffff;
+    max-width: 870px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  &__btn {
+    @include btn();
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px 40px;
+  }
+}

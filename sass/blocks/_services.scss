@@ -1,0 +1,33 @@
+.services {
+  &--container {
+    @include display(center, center);
+    gap: 100px;
+  }
+  &__Caption {
+    font-weight: 700;
+    font-size: 48px;
+    color: #293bdc;
+  }
+  &__description{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    color: #000000;
+    max-width: 490px;
+  }
+  &__wrap_right {
+    @include display(center, space-between);
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+  }
+  &__info{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #999999;
+    max-width: 330px;
+  }
+}
