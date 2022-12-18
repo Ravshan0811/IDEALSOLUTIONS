@@ -1,5 +1,5 @@
 .servers{
-  margin-top: 150px;
+  margin: 150px 0;
   &__wrapper{
     @include display(center,flex-start);
     flex-wrap: wrap;

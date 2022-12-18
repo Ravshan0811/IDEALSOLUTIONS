@@ -751,7 +751,7 @@ template {
 }
 
 .servers {
-  margin-top: 150px;
+  margin: 150px 0;
 }
 .servers__wrapper {
   display: flex;
