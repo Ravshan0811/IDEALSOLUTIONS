@@ -16,11 +16,45 @@
     margin-bottom: 50px;
   }
   &__btn {
+    position: relative;
     @include btn();
     font-weight: 600;
     font-size: 24px;
     text-align: center;
     color: #ffffff;
     padding: 20px 40px;
+    &::before {
+      content: "";
+      width: 20px;
+      height: 5px;
+      background: #000000;
+      position: absolute;
+      bottom: -4px;
+      right: 30px;
+    }
+  }
+}
+@media only screen and (max-width:1120px) {
+  .company{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .company {
+    padding: 50px 0;
+    text-align: center;
+    &__caption {
+      font-size: 28px;
+    }
+    &__description {
+      font-size: 15px;
+    }
+    &__btn {
+      font-size: 15px;
+    }
   }
 }

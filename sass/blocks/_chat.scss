@@ -21,6 +21,7 @@
     margin-bottom: 80px;
   }
   &__btn{
+    position: relative;
     @include btn();
     font-weight: 600;
     font-size: 24px;
@@ -29,6 +30,29 @@
     background: transparent;
     border-radius: 10px;
     padding: 20px 40px;
+    &:hover{
+      cursor: pointer;
+      background: #FFFFFF;
+      color: #293BDC;
+      &::before {
+        content: "";
+        width: 20px;
+        height: 5px;
+        background: #293BDC;
+        position: absolute;
+        bottom: -4px;
+        left: 30px;
+      }
+    }
+    &::before {
+      content: "";
+      width: 20px;
+      height: 5px;
+      background: #293BDC;
+      position: absolute;
+      bottom: -4px;
+      right: 30px;
+    }
   }
   &__img{
     max-width: 700px;
@@ -36,5 +60,91 @@
   &__wrapper{
     background: #000000;
     padding: 237px 22px;
+  }
+}
+
+@media only screen and (max-width:1186px) {
+  .chat{
+    background: #293BDC;
+    &--container{
+      @include display(center,space-between);
+    }
+    &__wrap{
+      margin-right: 10px;
+    }
+    &__caption{
+      font-size: 30px;
+    }
+    &__description{
+      font-size: 18px;
+      margin-top: 15px;
+      margin-bottom: 40px;
+    }
+    &__btn{
+      @include btn();
+      font-size: 18px;
+      background-color: transparent;
+      padding: 18px 30px;
+    }
+    &__img{
+      max-width: 600px;
+    }
+    &__wrapper{
+      background: #000000;
+      padding: 202px 22px;
+    }
+  }
+}
+@media only screen and (max-width:990px) {
+  .chat{
+    padding: 50px 0;
+    &--container{
+      @include display(center,center);
+      flex-direction: column;
+      text-align: center;
+    }
+    &__wrap{
+      margin: 0;
+    }
+    &__caption{
+      font-size: 30px;
+    }
+    &__description{
+      font-size: 18px;
+    }
+    &__btn{
+      @include btn();
+      font-size: 18px;
+      background-color: transparent;
+      padding: 18px 30px;
+    }
+    &__img{
+      max-width: 600px;
+      margin-top: 40px;
+    }
+    &__wrapper{
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width:610px) {
+  .chat{
+    &__caption{
+      font-size: 25px;
+    }
+    &__description{
+      font-size: 15px;
+    }
+    &__btn{
+      @include btn();
+      font-size: 15px;
+      background-color: transparent;
+      padding: 15px 25px;
+    }
+    &__img{
+      max-width: 300px;
+      margin-top: 40px;
+    }
   }
 }

@@ -1,0 +1,11 @@
+.heading{
+  padding: 100px 200px
+  300px;
+  background-image: url(../../images/Ideal.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &--container{
+    @include display(center,space-between)
+  }
+}

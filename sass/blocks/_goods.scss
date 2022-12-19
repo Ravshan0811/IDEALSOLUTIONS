@@ -18,6 +18,7 @@
     margin-top: 80px;
   }
   &__list_item{
+    position: relative;
     padding: 10px;
     text-align: center;
     width: 345px;
@@ -71,12 +72,38 @@
     line-height: 30px;
     color: #000000;
   }
+  &__line{
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    bottom: -1.35px;
+    width: 108px;
+    height: 3px;
+    border: #000000;
+    background: #000000;
+  }
 }
 
 @media only screen and (max-width:1090px) {
   .goods{
     &__list{
-     flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+  }
+}
+@media only screen and (max-width:767px) {
+  .goods{
+    padding: 50px 0;
+    &__caption{
+      font-size: 28px;
+      text-align: center;
+    }
+    &__description{
+      text-align: center;
+    }
+    &__list{
+      flex-wrap: wrap;
     }
   }
 }

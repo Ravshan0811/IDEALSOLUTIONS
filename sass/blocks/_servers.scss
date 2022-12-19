@@ -9,7 +9,7 @@
     position: relative;
     @include display(center,center);
     flex-direction: column;
-    max-width: 345px;
+    max-width: 340px;
     height: 400px;
     background: #FFFFFF;
     border: 1px solid #293BDC;
@@ -41,23 +41,35 @@
     color: #000000;
   }
   &__info{
+    display: none;
     font-weight: 300;
     font-size: 20px;
     color: #FFFFFF;
   }
   &__title{
+    display: none;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
     color: #FFFFFF;
   }
   &__btn{
+    position: relative;
     @include btn();
     font-weight: 600;
     font-size: 24px;
     color: #FFFFFF;
     padding: 18px 28px;
     margin-top: 60px;
+    &::before {
+      content: "";
+      width: 20px;
+      height: 5px;
+      background: #000000;
+      position: absolute;
+      bottom: -4px;
+      right: 30px;
+    }
   }
   &__card hr{
     width: 108px;
@@ -65,5 +77,70 @@
     bottom: 0;
     position: absolute;
     background: #293BDC;
+  }
+}
+
+@media only screen and(max-width:767px){
+  .servers{
+    margin: 150px 0;
+    &__wrapper{
+      @include display(center,center);
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    &__card{
+      position: relative;
+      @include display(center,center);
+      flex-direction: column;
+      max-width: 300px;
+      height: 400px;
+      background: #FFFFFF;
+      border: 1px solid #293BDC;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+    }
+    &__card_black{
+      @include display(center,center);
+      flex-direction: column;
+      max-width: 300px;
+      height: 400px;
+      background: #000000;
+      border-radius: 10px;
+      border: 1px solid #000000;
+      text-align: center;
+      padding: 20px;
+    }
+    &__description{
+      margin-top: 60px;
+      font-weight: 300;
+      font-size: 20px;
+      color: #000000;
+    }
+    &__caption{
+      font-size: 18px;
+    }
+    &__info{
+      font-size: 18px;
+    }
+    &__title{
+      font-weight: 700;
+      font-size: 20px;
+    }
+    &__btn{
+      @include btn();
+      font-weight: 600;
+      font-size: 15px;
+      color: #FFFFFF;
+      padding: 16px 25px;
+      margin-top: 60px;
+    }
+    &__card hr{
+      width: 108px;
+      height: 3px;
+      bottom: 0;
+      position: absolute;
+      background: #293BDC;
+    }
   }
 }
