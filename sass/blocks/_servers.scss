@@ -8,6 +8,12 @@
   &__box{
     display: grid;
     place-items: center;
+    &:hover .servers__card{
+      display: none
+    }
+    &:hover .servers__card_black{
+      display: grid;
+    }
   }
   &__card{
     position: relative;
@@ -31,7 +37,7 @@
     border: 1px solid #000000;
     text-align: center;
     padding: 30px;
-    display: block;
+    display: none;
   }
   &__description{
     margin-top: 60px;
@@ -91,6 +97,16 @@
       flex-wrap: wrap;
       gap: 20px;
     }
+    &__box{
+      display: grid;
+      place-items: center;
+      &:hover .servers__card{
+        display: none
+      }
+      &:hover .servers__card_black{
+        display: grid;
+      }
+    }
     &__card{
       position: relative;
       @include display(center,center);
@@ -101,7 +117,7 @@
       border: 1px solid #293BDC;
       border-radius: 10px;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
     }
     &__card_black{
       @include display(center,center);
@@ -112,7 +128,8 @@
       border-radius: 10px;
       border: 1px solid #000000;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
+      display: none;
     }
     &__description{
       margin-top: 60px;

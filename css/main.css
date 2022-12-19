@@ -1169,6 +1169,12 @@ template {
   display: grid;
   place-items: center;
 }
+.servers__box:hover .servers__card {
+  display: none;
+}
+.servers__box:hover .servers__card_black {
+  display: grid;
+}
 .servers__card {
   position: relative;
   display: flex;
@@ -1195,7 +1201,7 @@ template {
   border: 1px solid #000000;
   text-align: center;
   padding: 30px;
-  display: block;
+  display: none;
 }
 .servers__description {
   margin-top: 60px;
@@ -1262,6 +1268,16 @@ template {
     flex-wrap: wrap;
     gap: 20px;
   }
+  .servers__box {
+    display: grid;
+    place-items: center;
+  }
+  .servers__box:hover .servers__card {
+    display: none;
+  }
+  .servers__box:hover .servers__card_black {
+    display: grid;
+  }
   .servers__card {
     position: relative;
     display: flex;
@@ -1274,7 +1290,7 @@ template {
     border: 1px solid #293BDC;
     border-radius: 10px;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
   }
   .servers__card_black {
     display: flex;
@@ -1287,7 +1303,8 @@ template {
     border-radius: 10px;
     border: 1px solid #000000;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    display: none;
   }
   .servers__description {
     margin-top: 60px;
