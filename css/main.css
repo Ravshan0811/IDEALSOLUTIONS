@@ -381,13 +381,18 @@ template {
   line-height: 30px;
   color: #ffffff;
   transition: 0.5s all;
+  cursor: pointer;
 }
 .nav__iteam:hover {
   color: #293bdc;
 }
 .nav__list1 {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
   padding-left: 25px;
+  display: none;
 }
 .nav__link {
   font-style: normal;
@@ -400,7 +405,7 @@ template {
 }
 
 .hidden {
-  display: flex;
+  display: grid;
 }
 
 .company {
@@ -468,122 +473,69 @@ template {
     font-size: 15px;
   }
 }
-.services {
+.ideal {
+  display: flex;
+  justify-content: space-between;
   padding: 150px 0;
 }
-.services--container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 100px;
-}
-.services__caption {
+.ideal__heading {
+  font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 60px;
-  color: #293BDC;
+  font-size: 42px;
+  line-height: 50px;
+  color: #293bdc;
+  margin-bottom: 20px;
 }
-.services__description {
+.ideal__text {
+  font-style: normal;
   font-weight: 300;
   font-size: 20px;
   line-height: 150%;
   color: #000000;
-  max-width: 490px;
-  margin-top: 20px;
 }
-.services__wrap_right {
+.ideal__wrapper {
+  width: 60%;
+  gap: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.ideal__card {
+  width: 285px;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 30px;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 80px;
 }
-.services__card {
-  width: 300px;
+.ideal__img {
+  margin-bottom: 40px;
 }
-.services__card_text {
-  margin-top: 40px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.services__title {
+.ideal__card-title {
+  font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  color: #000000;
+  line-height: 25px;
   margin-bottom: 10px;
+  color: #000000;
 }
-.services__info {
+.ideal__card-text {
+  font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
   color: #999999;
-  max-width: 330px;
-  margin-bottom: 40px;
+}
+.ideal__for {
+  margin-top: 50px;
+  border-left: 1px solid #999999;
+  padding-left: 10px;
+  height: 50px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #999999;
 }
 
-@media only screen and (max-width: 1120px) {
-  .services {
-    padding: 150px 0;
-  }
-  .services--container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    gap: 100px;
-  }
-  .services__card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 300px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .services {
-    padding: 50px 0;
-  }
-  .services--container {
-    flex-direction: column;
-    gap: 50px;
-  }
-  .services__card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 300px;
-  }
-  .services__caption {
-    font-size: 28px;
-  }
-  .services__description {
-    font-size: 20px;
-    line-height: 150%;
-    margin-top: 10px;
-  }
-  .services__wrap_right {
-    display: block;
-    gap: 20px;
-  }
-  .services__card {
-    width: 300px;
-  }
-  .services__title {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  .services__info {
-    font-size: 14px;
-    line-height: 150%;
-    color: #999999;
-    max-width: 330px;
-    margin-bottom: 30px;
-  }
-}
 .goods {
   padding: 150px 0;
   background: #293bdc;
@@ -602,6 +554,7 @@ template {
 .goods__wrapper {
   margin-top: 80px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
 }
@@ -726,6 +679,7 @@ template {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 80px;
 }
@@ -770,32 +724,44 @@ template {
     width: 80px;
   }
 }
-.chat {
-  background: #293BDC;
+.address {
+  background-color: #293bdc;
 }
-.chat--container {
+.address__wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
-.chat__wrap {
-  margin-right: 50px;
+.address__box {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-direction: column;
+  flex-grow: 30;
+  text-align: justify;
+  margin-left: 100px;
 }
-.chat__caption {
+.address__bar_map {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+.address__caption {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   color: #FFFFFF;
+  margin-bottom: 20px;
 }
-.chat__description {
+.address__description {
   font-weight: 300;
   font-size: 20px;
   line-height: 150%;
   color: #FFFFFF;
-  max-width: 443px;
-  margin-top: 20px;
   margin-bottom: 80px;
 }
-.chat__btn {
+.address__btn {
   position: relative;
   background: #000000;
   border: 4px solid #FFFFFF;
@@ -806,17 +772,19 @@ template {
   color: #FFFFFF;
   background: transparent;
   border-radius: 10px;
-  padding: 20px 40px;
+  width: 280px;
+  padding: 18px 35px;
+  transition: all 0.7s ease-in;
 }
-.chat__btn:hover {
+.address__btn:hover {
   cursor: pointer;
 }
-.chat__btn:hover {
+.address__btn:hover {
   cursor: pointer;
   background: #FFFFFF;
   color: #293BDC;
 }
-.chat__btn:hover::before {
+.address__btn:hover::before {
   content: "";
   width: 20px;
   height: 5px;
@@ -825,7 +793,7 @@ template {
   bottom: -4px;
   left: 30px;
 }
-.chat__btn::before {
+.address__btn::before {
   content: "";
   width: 20px;
   height: 5px;
@@ -834,35 +802,17 @@ template {
   bottom: -4px;
   right: 30px;
 }
-.chat__img {
-  max-width: 700px;
-}
-.chat__wrapper {
-  background: #000000;
-  padding: 237px 22px;
-}
 
 @media only screen and (max-width: 1186px) {
-  .chat {
-    background: #293BDC;
-  }
-  .chat--container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .chat__wrap {
-    margin-right: 10px;
-  }
-  .chat__caption {
+  .address__caption {
     font-size: 30px;
   }
-  .chat__description {
+  .address__description {
     font-size: 18px;
     margin-top: 15px;
     margin-bottom: 40px;
   }
-  .chat__btn {
+  .address__btn {
     background: #000000;
     border: 4px solid #FFFFFF;
     border-radius: 10px;
@@ -870,38 +820,21 @@ template {
     background-color: transparent;
     padding: 18px 30px;
   }
-  .chat__btn:hover {
+  .address__btn:hover {
     cursor: pointer;
-  }
-  .chat__img {
-    max-width: 600px;
-  }
-  .chat__wrapper {
-    background: #000000;
-    padding: 202px 22px;
   }
 }
 @media only screen and (max-width: 990px) {
-  .chat {
+  .address {
     padding: 50px 0;
   }
-  .chat--container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  .chat__wrap {
-    margin: 0;
-  }
-  .chat__caption {
+  .address__caption {
     font-size: 30px;
   }
-  .chat__description {
+  .address__description {
     font-size: 18px;
   }
-  .chat__btn {
+  .address__btn {
     background: #000000;
     border: 4px solid #FFFFFF;
     border-radius: 10px;
@@ -909,25 +842,18 @@ template {
     background-color: transparent;
     padding: 18px 30px;
   }
-  .chat__btn:hover {
+  .address__btn:hover {
     cursor: pointer;
-  }
-  .chat__img {
-    max-width: 600px;
-    margin-top: 40px;
-  }
-  .chat__wrapper {
-    display: none;
   }
 }
 @media only screen and (max-width: 610px) {
-  .chat__caption {
+  .address__caption {
     font-size: 25px;
   }
-  .chat__description {
+  .address__description {
     font-size: 15px;
   }
-  .chat__btn {
+  .address__btn {
     background: #000000;
     border: 4px solid #FFFFFF;
     border-radius: 10px;
@@ -935,12 +861,8 @@ template {
     background-color: transparent;
     padding: 15px 25px;
   }
-  .chat__btn:hover {
+  .address__btn:hover {
     cursor: pointer;
-  }
-  .chat__img {
-    max-width: 300px;
-    margin-top: 40px;
   }
 }
 .footer {
@@ -1630,6 +1552,7 @@ template {
   display: flex;
   flex-direction: column;
   width: 180px;
+  transition: all 0.7s ease-in;
 }
 .showcase__btn::before {
   content: "";

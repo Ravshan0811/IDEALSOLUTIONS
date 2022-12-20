@@ -1,23 +1,37 @@
-.chat{
-  background: #293BDC;
-  &--container{
-    @include display(center,space-between);
+.address {
+  background-color: #293bdc;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
   }
-  &__wrap{
-    margin-right: 50px;
+  &__box {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    flex-grow: 30;
+    text-align: justify;
+    margin-left: 100px;
+  }
+  &__bar_map {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
   }
   &__caption{
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
     color: #FFFFFF;
+    margin-bottom: 20px;
   }
   &__description{
     font-weight: 300;
     font-size: 20px;
     line-height: 150%;
     color: #FFFFFF;
-    max-width: 443px;
-    margin-top: 20px;
     margin-bottom: 80px;
   }
   &__btn{
@@ -29,7 +43,9 @@
     color: #FFFFFF;
     background: transparent;
     border-radius: 10px;
-    padding: 20px 40px;
+    width: 280px;
+    padding: 18px 35px;
+    transition: all 0.7s ease-in;
     &:hover{
       cursor: pointer;
       background: #FFFFFF;
@@ -54,24 +70,10 @@
       right: 30px;
     }
   }
-  &__img{
-    max-width: 700px;
-  }
-  &__wrapper{
-    background: #000000;
-    padding: 237px 22px;
-  }
 }
 
 @media only screen and (max-width:1186px) {
-  .chat{
-    background: #293BDC;
-    &--container{
-      @include display(center,space-between);
-    }
-    &__wrap{
-      margin-right: 10px;
-    }
+  .address{
     &__caption{
       font-size: 30px;
     }
@@ -86,26 +88,11 @@
       background-color: transparent;
       padding: 18px 30px;
     }
-    &__img{
-      max-width: 600px;
-    }
-    &__wrapper{
-      background: #000000;
-      padding: 202px 22px;
-    }
   }
 }
 @media only screen and (max-width:990px) {
-  .chat{
+  .address{
     padding: 50px 0;
-    &--container{
-      @include display(center,center);
-      flex-direction: column;
-      text-align: center;
-    }
-    &__wrap{
-      margin: 0;
-    }
     &__caption{
       font-size: 30px;
     }
@@ -118,18 +105,11 @@
       background-color: transparent;
       padding: 18px 30px;
     }
-    &__img{
-      max-width: 600px;
-      margin-top: 40px;
-    }
-    &__wrapper{
-      display: none;
-    }
   }
 }
 
 @media only screen and (max-width:610px) {
-  .chat{
+  .address{
     &__caption{
       font-size: 25px;
     }
@@ -141,10 +121,6 @@
       font-size: 15px;
       background-color: transparent;
       padding: 15px 25px;
-    }
-    &__img{
-      max-width: 300px;
-      margin-top: 40px;
     }
   }
 }

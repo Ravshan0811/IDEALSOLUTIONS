@@ -28,6 +28,7 @@
     line-height: 30px;
     color: #ffffff;
     transition: 0.5s all;
+    cursor: pointer;
     &:hover {
       color: #293bdc;
     }
@@ -35,7 +36,11 @@
 
   &__list1 {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
     padding-left: 25px;
+    display: none;
   }
 
   &__link {
@@ -50,5 +55,5 @@
 }
 
 .hidden {
-  display: flex;
+  display: grid;
 }
