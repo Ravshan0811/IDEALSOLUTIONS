@@ -8,6 +8,7 @@
   &__box{
     display: grid;
     place-items: center;
+    transition: all 0.8s ease;
     &:hover .servers__card{
       display: none
     }
@@ -100,10 +101,13 @@
     &__box{
       display: grid;
       place-items: center;
+      transition: all 0.8s ease-in;
       &:hover .servers__card{
+        cursor: pointer;
         display: none
       }
       &:hover .servers__card_black{
+        cursor: pointer;
         display: grid;
       }
     }

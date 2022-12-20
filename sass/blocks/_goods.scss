@@ -23,6 +23,7 @@
   &__card {
     display: grid;
     place-items: center;
+    transition: all 0.4s ease-in;
   }
   
   &__card_one {
