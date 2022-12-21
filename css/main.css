@@ -803,7 +803,10 @@ template {
   right: 30px;
 }
 
-@media only screen and (max-width: 1186px) {
+@media only screen and (max-width: 1310px) {
+  .address__map_box {
+    width: 650px;
+  }
   .address__caption {
     font-size: 30px;
   }
@@ -816,31 +819,94 @@ template {
     background: #000000;
     border: 4px solid #FFFFFF;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 16px;
     background-color: transparent;
-    padding: 18px 30px;
+    padding: 18px 25px;
+    width: 230px;
   }
   .address__btn:hover {
     cursor: pointer;
   }
 }
+@media only screen and (max-width: 1150px) {
+  .address__map_box {
+    width: 500px;
+  }
+}
 @media only screen and (max-width: 990px) {
-  .address {
-    padding: 50px 0;
+  .address__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .address__box {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    flex-grow: 30;
+    text-align: left;
+    margin-left: 10px;
+  }
+  .address__box br {
+    display: none;
+  }
+  .address__bar_map {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
   }
   .address__caption {
-    font-size: 30px;
+    font-size: 20px;
   }
   .address__description {
-    font-size: 18px;
+    font-size: 16px;
   }
   .address__btn {
     background: #000000;
     border: 4px solid #FFFFFF;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 14px;
     background-color: transparent;
-    padding: 18px 30px;
+    padding: 10px;
+    width: 150px;
+  }
+  .address__btn:hover {
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 788px) {
+  .address__wrapper {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .address__box {
+    align-items: center;
+    text-align: center;
+  }
+  .address__map_box {
+    width: 500px;
+    height: 350px;
+  }
+  .address__caption {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .address__description {
+    font-size: 16px;
+  }
+  .address__btn {
+    background: #000000;
+    border: 4px solid #FFFFFF;
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: transparent;
+    padding: 10px;
+    width: 180px;
+    margin-bottom: 30px;
   }
   .address__btn:hover {
     cursor: pointer;
@@ -863,6 +929,24 @@ template {
   }
   .address__btn:hover {
     cursor: pointer;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .address__map_box {
+    width: 450px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .address__map_box {
+    width: 400px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .address__map_box {
+    width: 300px;
+    height: 200px;
   }
 }
 .footer {
