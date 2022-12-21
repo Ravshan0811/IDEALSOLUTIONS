@@ -577,7 +577,8 @@ template {
     font-size: 18px;
   }
   .ideal__wrapper {
-    gap: 100px;
+    width: 100%;
+    gap: 50px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
