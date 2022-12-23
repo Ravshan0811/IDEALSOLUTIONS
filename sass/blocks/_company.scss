@@ -23,6 +23,7 @@
     text-align: center;
     color: #ffffff;
     padding: 20px 40px;
+    transition: all 0.6s;
     &::before {
       content: "";
       width: 20px;
@@ -31,6 +32,20 @@
       position: absolute;
       bottom: -4px;
       right: 30px;
+      transition: all 1s;
+    }
+    &:hover{
+      cursor: pointer;
+      background: #FFFFFF;
+      color: #293BDC;
+      &::before {
+        content: "";
+        width: 20px;
+        height: 5px;
+        position: absolute;
+        transform: translateX(-120px);
+        bottom: -4px;
+      }
     }
   }
 }

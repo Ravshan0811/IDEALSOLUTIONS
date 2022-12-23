@@ -1,5 +1,5 @@
-.heading{
-  background-image: url(../images/Ideal.png);
+.prime{
+  background-image: url(../images/serverPrime.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -28,7 +28,7 @@
 }
 
 @media only screen and (max-width:767px) {
-  .heading{
+  .prime{
     height: 40vh;
     &__wrapper{
       position: relative;

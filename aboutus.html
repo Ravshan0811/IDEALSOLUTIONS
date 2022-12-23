@@ -8,16 +8,42 @@
   <title>Aboutus</title>
 </head>
 <body>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__iteam">1. Каталог товаров</li>
+      <ul class="nav__list1">
+        <li class="nav__iteam">
+          <a href="#" class="nav__link">Серверы и СХД</a>
+        </li>
+        <li class="nav__iteam">
+          <a href="#" class="nav__link">Комплектующие</a>
+        </li>
+        <li class="nav__iteam">
+          <a href="#" class="nav__link">Компьютеры</a>
+        </li>
+        <li class="nav__iteam"><a href="#" class="nav__link">Ноутбуки</a></li>
+        <li class="nav__iteam">
+          <a href="#" class="nav__link">Периферия</a>
+        </li>
+      </ul>
+      <li class="nav__iteam">2. О компании</li>
+      <li class="nav__iteam">3. Контакты</li>
+    </ul>
+  </nav>
   <header class="heading">
-    <div class="container heading--container">
-      <a href="./aboutus.html"><img src="./images/IdealSolutionsWhite.svg" alt="logo"></a>
-      <div class="heading__right"><img src="./images/restangle.svg" alt="restangle img"></div>
+    <div class="heading__wrapper">
+      <div class="container heading--container">
+        <a href="./aboutus.html"><img src="./images/IdealSolutionsWhite.svg" alt="logo" class="heading__logo"></a>
+      </div>
+      <div class="heading__wrap">
+        <img src="./images/restangle.svg" class="nav__img heading--img">
+      </div>
     </div>
   </header>
   <main>
     <!-- Campaign section -->
     <section class="campaign">
-      <div class="container">
+      <div class="container campaign--container">
         <div class="campaign__text">
           <h2 class="campaign__caption">О компании</h2>
           <p class="campaign__description">
@@ -80,28 +106,18 @@
     <!--? Address section -->
     <section class="address">
       <div class="address__wrapper">
-        <div class="address__box">
-          <h2 class="address__caption">Хотите пообщаться?</h2>
+        <div class="container address--container">
+          <h2 class="address__caption">
+            Хотите пообщаться?
+          </h2>
           <p class="address__description">
-            Позвоните нам или оставьте заявку. <br/>
-            Вместе мы подберём решение <br/>
-            и подходящий инструмент
+            Позвоните нам или оставьте заявку. Вместе мы подберём решение и подходящий инструмент
           </p>
-          <a href="#" class="address__btn">оставить заявку</a>
+          <button class="address__btn">оставить заявку</button>
         </div>
-        <div class="address__map">
-          <iframe
-          class="address__map_box"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.0730688873514!2d69.20162391540012!3d41.28551417927365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba578f4f58d%3A0xd7a2ecf23413b7a0!2sNajot%20Ta&#39;lim%20Chilonzor%20Filial!5e0!3m2!1sru!2s!4v1671552200887!5m2!1sru!2s"
-          width="800"
-          height="500"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <iframe class="address__map_box"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.0730688873514!2d69.20162391540012!3d41 28551417927365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba578f4f58d%3A0xd7a2ecf23413b7a0!2sNajot%20Ta&#39;lim%20Chilonzor%20Filial!5e0!3m2!1sru!2s!4v1671552200887!5m2!1sru!2s"   style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="address__bar_map">
-          <img class="nav__img" src="./images/restangle.svg" alt=""/>
+          <img src="./images/restangle.svg" class="address__img">
         </div>
       </div>
     </section>

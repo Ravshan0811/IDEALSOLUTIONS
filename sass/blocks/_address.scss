@@ -4,22 +4,24 @@
     display: flex;
     justify-content: space-between;
   }
-  &__box {
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    flex-direction: column;
-    flex-grow: 30;
-    text-align: justify;
-    margin-left: 100px;
+  &--container{
+    margin-top: 100px;
+    transform: translateX(35px);
   }
   &__bar_map {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #000000;
+    position: relative;
+    width: 100px;
+    background: #000000;
+  }
+  &__img{
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    &:hover{
+      cursor: pointer;
+    }
   }
   &__caption{
     font-weight: 700;
@@ -32,6 +34,7 @@
     font-size: 20px;
     line-height: 150%;
     color: #FFFFFF;
+    max-width: 400px;
     margin-bottom: 80px;
   }
   &__btn{
@@ -45,7 +48,7 @@
     border-radius: 10px;
     width: 280px;
     padding: 18px 35px;
-    transition: all 0.7s ease-in;
+    transition: all 1s ease-in;
     &:hover{
       cursor: pointer;
       background: #FFFFFF;
@@ -56,8 +59,9 @@
         height: 5px;
         background: #293BDC;
         position: absolute;
+        transform: translateX(-195px);
+        transition: all 1s;
         bottom: -4px;
-        left: 30px;
       }
     }
     &::before {
@@ -68,151 +72,87 @@
       position: absolute;
       bottom: -4px;
       right: 30px;
+      transition: all 1s;
+    }
+  }
+  &__map_box{
+    width: 40%;
+    height: 600px;
+  }
+}
+@media only screen and (max-width:1200px){
+  .address{
+    &__map_box{
+      width: 45%;
+      height: 500px;
     }
   }
 }
 
-@media only screen and (max-width:1310px) {
-  .address{
-    &__map_box{
-      width: 650px;
-    }
+@media only screen and (max-width:1100px) {
+  .address {
     &__caption{
       font-size: 30px;
+      margin-bottom: 20px;
     }
     &__description{
       font-size: 18px;
-      margin-top: 15px;
-      margin-bottom: 40px;
-    }
-    &__btn{
-      @include btn();
-      font-size: 16px;
-      background-color: transparent;
-      padding: 18px 25px;
-      width: 230px;
-    }
-  }
-}
-@media only screen and (max-width:1150px) {
-  .address{
-    &__map_box{
-      width: 500px;
-    }
-  }
-}
-@media only screen and (max-width:990px) {
-  .address{
-    &__wrapper {
-      display: flex;
-      justify-content: center;
-    }
-    &__box {
-      display: flex;
-      justify-content: center;
-      text-align: left;
-      flex-direction: column;
-      flex-grow: 30;
-      text-align: left;
-      margin-left: 10px;
-    }
-    &__box br{
-      display: none;
+      line-height: 150%;
+      max-width: 400px;
+      margin-bottom: 80px;
     }
     &__bar_map {
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #000000;
-    }
-    &__caption{
-      font-size: 20px;
-    }
-    &__description{
-      font-size: 16px;
-    }
-    &__btn{
-      @include btn();
-      font-size: 14px;
-      background-color: transparent;
-      padding: 10px;
-      width: 150px;
-    }
-  }
-}
-@media only screen and (max-width:788px) {
-  .address{
-    &__wrapper{
-      align-items: center;
-      text-align: center;
-      flex-direction: column;
-    }
-    &__box{
-      align-items: center;
-      text-align: center;
+      position: relative;
+      width: 100px;
+      background: #000000;
     }
     &__map_box{
-      width: 500px;
-      height: 350px;
-    }
-    &__caption{
-      font-size: 20px;
-      margin-top: 20px;
-    }
-    &__description{
-      font-size: 16px;
-    }
-    &__btn{
-      @include btn();
-      font-size: 12px;
-      background-color: transparent;
-      padding:10px;
-      width: 180px;
-      margin-bottom: 30px;
+      width: 40%;
+      height: 450px;
     }
   }
 }
-
-@media only screen and (max-width:610px) {
-  .address{
+@media only screen and (max-width:767px) {
+  .address {
+    &__wrapper {
+      @include display(center,center);
+      flex-direction: column;
+    }
+    &--container{
+      @include display(center,center);
+      flex-direction: column;
+      margin-top: 100px;
+      transform: translateX(0);
+    }
     &__caption{
+      text-align: center;
       font-size: 25px;
+      margin-bottom: 20px;
     }
     &__description{
-      font-size: 15px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 150%;
+      max-width: 400px;
+      margin-bottom: 50px;
     }
     &__btn{
-      @include btn();
-      font-size: 15px;
-      background-color: transparent;
-      padding: 15px 25px;
+      font-size: 16px;
+      width: 230px;
+      padding: 15px 24px;
+    }
+    &__bar_map {
+      display: none;
+      position: relative;
+      width: 100px;
+      background: #000000;
+      transform: translate(320%,-430px);
+    }
+    &__map_box{
+      margin-top: 50px;
+      width: 100%;
+      height: 450px;
     }
   }
 }
 
-@media only screen and (max-width:500px) {
-  .address{
-    &__map_box{
-      width: 450px;
-      height: 300px;
-    }
-  }
-}
-@media only screen and (max-width:450px) {
-  .address{
-    &__map_box{
-      width: 400px;
-      height: 300px;
-    }
-  }
-}
-@media only screen and (max-width:400px) {
-  .address{
-    &__map_box{
-      width: 300px;
-      height: 200px;
-    }
-  }
-}

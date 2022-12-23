@@ -1,5 +1,17 @@
 .servers{
   margin: 150px 0;
+  &__blue_box{
+    transform: translateY(-320px);
+    background: #293BDC;
+    padding: 80px;
+    width: 900px;
+    height: 220px;
+  }
+  &__headline{
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+  }
   &__wrapper{
     @include display(center,flex-start);
     flex-wrap: wrap;
@@ -79,6 +91,21 @@
       position: absolute;
       bottom: -4px;
       right: 30px;
+      transition: all 1s ;
+    }
+    &:hover{
+      cursor: pointer;
+      background: #FFFFFF;
+      color: #293BDC;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 5px;
+        background: #000000;
+        transform: translateX(-165px);
+        bottom: -4px;
+      }
     }
   }
   &__card hr{
@@ -90,13 +117,44 @@
   }
 }
 
+@media only screen and(max-width:1024px) {
+  .servers{
+    &__blue_box{
+      transform: translateY(-240px);
+      background: #293BDC;
+      padding: 40px;
+      width: 400px;
+      height: 120px;
+    }
+    &__headline{
+      font-weight: 700;
+      font-size: 30px;
+      color: #FFFFFF;
+    }
+  }
+}
+
 @media only screen and(max-width:767px){
   .servers{
-    margin: 150px 0;
+    margin: 100px 0;
+    &__blue_box{
+      margin: 0 auto;
+      transform: translateY(0);
+      background: #293BDC;
+      padding: 25px;
+      width: 280px;
+      height: 80px;
+    }
+    &__headline{
+      font-weight: 700;
+      font-size: 25px;
+      color: #FFFFFF;
+    }
     &__wrapper{
       @include display(center,center);
       flex-wrap: wrap;
       gap: 20px;
+      margin-top: 20px;
     }
     &__box{
       display: grid;
